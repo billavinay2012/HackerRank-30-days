@@ -1,0 +1,17 @@
+n=int(input())
+nameList=newnameList=[]
+
+for i in range(n):
+    nameList.append(input())
+for i in range(n):
+    s1=s2=s=""
+    temp = nameList[i]
+    for j in range(len(temp)):
+        if j%2==0:
+            s1+=temp[j]
+        else:
+            s2+=temp[j]
+    s=s1+" "+s2
+    newnameList[i]=s
+for i in range(n):
+    print(newnameList[i])
