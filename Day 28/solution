@@ -1,0 +1,29 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+
+if __name__ == '__main__':
+    N = int(input())
+    mylist=[]
+    for N_itr in range(N):
+        regex="^[a-z.]+@gmail.com+$"
+        firstNameEmailID = input().split()
+
+        firstName = firstNameEmailID[0]
+
+        emailID = firstNameEmailID[1]
+        if re.match(regex, emailID):
+            mylist.append(firstName)
+    
+    mylist.sort()
+    for i in mylist:
+        print(i)
+        
+        
+        
