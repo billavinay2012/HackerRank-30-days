@@ -1,0 +1,23 @@
+import math
+
+def isPrime(n):
+    if n==2:
+        return True
+    if n <= 1 or n%2==0:
+        return False
+    sqrt_n=int(math.sqrt(n))
+    if sqrt_n%2==0:
+        sqrt_n+=1
+    for i in range(3,sqrt_n+1,2):
+        if n%i==0:
+            return False
+    return True
+    
+
+num_test_cases = int(input())
+for i in range(num_test_cases):
+    n = int(input())
+    if isPrime(n):
+        print('Prime')
+    else:
+        print('Not prime')
